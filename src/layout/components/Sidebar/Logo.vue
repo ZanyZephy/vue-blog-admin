@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       title: '',
-      logo: 'https://cdn.boblog.com/FieFyVleQaVrqewVfPFkYgjlODZK'
+      logo: require('@/assets/logo/boblog.png')
     }
   }
 }

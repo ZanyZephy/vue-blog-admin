@@ -9,7 +9,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <img width="180" src="https://cdn.boblog.com/FieFyVleQaVrqewVfPFkYgjlODZK" alt="logo">
+        <img width="180" :src="require('@/assets/logo/boblog.png')" alt="logo">
       </div>
 
       <el-form-item prop="email">
@@ -68,14 +68,14 @@ export default {
   data() {
     const validateEmail = (rule, value, callback) => {
       if (!validEmail(value)) {
-        callback(new Error('Please enter your vaild email'))
+        callback(new Error('请输入您的有效电子邮箱'))
       } else {
         callback()
       }
     }
     const validatePassword = (rule, value, callback) => {
       if (value.length < 6) {
-        callback(new Error('The password can not be less than 6 digits'))
+        callback(new Error('密码长度不能小于6位'))
       } else {
         callback()
       }
